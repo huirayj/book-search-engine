@@ -39,4 +39,4 @@ In this activity, the user was given a functioning React application using REST 
 
 ## Screenshot
 ### Desktop
-![Google Book Search Desktop](./assets/screenshots/book-search-engine-desktop.png)
+![Google Book Search Desktop](./media/screenshots/book-search-engine-desktop.png)
