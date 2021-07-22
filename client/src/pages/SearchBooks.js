@@ -14,6 +14,8 @@ const SearchBooks = () => {
   const [searchInput, setSearchInput] = useState('');
   // create state to hold saved bookId values
   const [savedBookIds, setSavedBookIds] = useState(getSavedBookIds());
+
+  // TODO: Use the Apollo `useMutation()` Hook to execute the `SAVE_BOOK` mutation
   const [saveBook, { error }] = useMutation(SAVE_BOOK);
 
   // set up useEffect hook to save `savedBookIds` list to localStorage on component unmount
@@ -32,7 +34,6 @@ const SearchBooks = () => {
 
     try {
       const response = await searchGoogleBooks(searchInput);
-      
 
       if (!response.ok) {
         throw new Error('something went wrong!');
@@ -67,11 +68,14 @@ const SearchBooks = () => {
       return false;
     }
 
+    // TODO: instead of the `saveBook()` function imported from the `API` file.
     try {
-      await saveBook({
-        variables: { input: bookToSave },
+      const data = await saveBook({
+        variables: { ...bookToSave },
       });
 
+      // console.log(data);
+      
       // if book successfully saves to user's account, save book id to state
       setSavedBookIds([...savedBookIds, bookToSave.bookId]);
     } catch (err) {
