@@ -3,7 +3,7 @@
 ![book-search-engine-demo](./media/demos/book-search-engine-demo.gif)
 
 ## Overview
-In this activity, the user was given a React application using REST API to be refactored to using GraphQL. 
+In this activity, the user was given a functioning React application using REST API to be refactored to using Apollo GraphQL. 
 
 ## Table of Contents  
 1. [Installation](#installation) 
