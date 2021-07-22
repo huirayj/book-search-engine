@@ -5,11 +5,22 @@
 ## Overview
 In this activity, the user was given a functioning React application using REST API to be refactored to using Apollo GraphQL. 
 
-## Table of Contents  
-1. [Installation](#installation) 
-2. [Usage](#usage) 
-3. [Links](#links)
-4. [Screenshot](#screenshot)
+## Table of Contents
+ - [Pseudocode](#pseudocode)  
+ - [Installation](#installation) 
+ - [Usage](#usage) 
+ - [Links](#links)
+ - [Screenshot](#screenshot)
+
+## Pseudocode
+1. Update server.js to implement Apollo Server.
+2. Update auth.js middleware to work with GraphQL API.
+3. Create typeDefs by referencing models. Specifically, create a query that returns me, a User type.
+4. Create resolvers by referencing controllers.
+5. Export typeDefs and resolvers using index.js in the same folder.
+6. Create a query for 'me' and mutations for respective API methods.
+7. Update App.js to use Apollo Provider.
+8. Update Searchbooks.js, SavedBooks.js, SignupForm.js, and LoginForm.js to use mutations.
 
 ## Installation
 -  ```npm i```
@@ -29,4 +40,3 @@ In this activity, the user was given a functioning React application using REST 
 ## Screenshot
 ### Desktop
 ![Google Book Search Desktop](./assets/screenshots/book-search-engine-desktop.png)
-
